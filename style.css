@@ -1,12 +1,9 @@
 :root {
-    --clr-primary: #4aa96c;
-    --clr-secundary: #9fe6a0;
-    --clr-dark: #29211c;
-    
-    
+    --clr-primary: #fffbdf;
+    --clr-secundary: #c6ffc1;
+    --clr-navy: #34656d;
+    --clr-dark: #334443;   
 }
-
-
 html {
     line-height: 1.15; 
     -webkit-text-size-adjust: 100%; 
@@ -17,21 +14,17 @@ h1 {
     font-family: 'Rokkitt', serif;
     color: var(--clr-dark);
 }
-
 body {
     font-size: 1.3rem;
     color: var(--clr-dark);
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu Mono', monospace;
 }
-
 .section{
-    
     min-height: 100vh;
     overflow: hidden;
     background-color: var(--clr-primary);
@@ -42,11 +35,10 @@ body {
     justify-content: space-around;
     min-height: 80vh;
     margin: 0 auto;
-    max-width: 38rem;
-    
+    max-width: 38rem;    
 }
 header { 
-    background-color: var(--clr-secundary);
+    background-color: var(--clr-primary);
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -54,6 +46,7 @@ header {
     margin: 0 auto;
     font-weight: bold;   
 }
+/* CARD */
 .card{ 
     font-weight: bold;
     max-width: 15rem;
@@ -62,14 +55,12 @@ header {
     background-color: var(--clr-secundary);
     margin: 3.5rem auto;
     padding-top: 1.5rem;
-    box-shadow: 0px 1px 8px 0px rgb(193, 223, 203);
-    
+    box-shadow: 0px 1px 8px 0px rgb(158, 190, 169);     
 }
 textarea {
     height: 4rem;
-    background-color: rgb(245, 240, 223);
+    background-color: var(--clr-primary);
 }
-
 .btn {
     margin-top: 1rem;
     width: 100%;
@@ -78,7 +69,7 @@ textarea {
     padding: 1rem;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    background-color: #f55c47;
+    background-color: var(--clr-navy);
     color:rgb(255, 255, 255);
 }
 button:hover{
@@ -87,19 +78,10 @@ button:hover{
     transition: all 0.3s ease-out;
 }
 button:active{
-    opacity: 55%;
-    color:rgb(204, 204, 204);
-    box-shadow: 0px 1px 2px 0px var(--clr-secundary);
-    box-shadow: inset 0px 2px 2px 0px var(--clr-primary);
+    opacity: 65%; 
+    box-shadow: 0px -3px -2px 0px white;
+    box-shadow: inset 0px 2px 2px 0px var(--clr-navy);
     transition: all 0.5s ease-out;
-    
-}
-.eight-ball{
-    background-color: #564a4a;
-    width: 16rem;
-    height: 16rem;
-    border-radius: 50%;
-    margin: 2.5rem auto;
     
 }
 .text-fill {
@@ -108,6 +90,35 @@ button:active{
     border-radius: 0.2rem;
     font-size: 1rem;
 }
+
+/* BOLA 8 */
+.eight-ball{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto; 
+    background-color: #564a4a;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;   
+}
+.numero{
+    position: relative;
+    top: -4.6rem;      
+}
+.numero > span{
+    font-size: 5rem;;
+}
+.pegatina{
+    position: relative;
+    top: 2rem;
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 50%;
+    background-color: var(--clr-secundary);
+}
+
 footer{ 
     width: 100%;
     height: 7rem;
@@ -127,12 +138,10 @@ hr{
    height: 0.1px;
    min-width: 100%;
    color: var(--clr-secundary);
-   opacity: 50%;
+   opacity: 40%;
    margin-bottom: 1.5rem;
    
 }
-
-
 @media (min-width: 600px) {
     * {
         font-size: 1.3rem;
@@ -143,11 +152,13 @@ hr{
 }
 @media (min-width: 900px) {
     .container {
+        border: 1px solid blue;
         display: flex;
         flex-direction: row-reverse;
-        align-items: flex-end;
-        justify-content: space-between;
-        margin-top: 2rem;
+        align-items: center;
+        justify-content: center;
+        
+        margin-top: 1rem;
     }
    
   
