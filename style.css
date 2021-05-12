@@ -1,7 +1,8 @@
 :root {
     --clr-primary: #4aa96c;
     --clr-secundary: #9fe6a0;
-    --clr-gray: #53665d;
+    --clr-dark: #29211c;
+    
 }
 
 
@@ -12,11 +13,9 @@ html {
 h1 {
     font-size: 1.5em;
     margin: 0.67em 0;
+    font-family: 'Rokkitt', serif;
 }
-a {
-    text-decoration: none;
 
-}
 body {
     font-size: 1.3rem;
 }
@@ -25,8 +24,8 @@ body {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: "Open Sans", sans-serif;
-      color: #29211c;
+      font-family: 'Ubuntu Mono', monospace;
+      color: var(--clr-dark);
 }
 
 .section{
@@ -50,21 +49,21 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 2.5rem;
+    padding: 2rem;
     margin: 0 auto;
+    font-weight: bold;
+    
    
 }
-.card{
-    
+.card{ 
     font-weight: bold;
-    font-size: 1.3rem;
     max-width: 15rem;
     border-radius: 1rem;
     text-align: center;
     background-color: var(--clr-secundary);
-    margin: 4rem auto;
+    margin: 3.5rem auto;
     padding-top: 1.5rem;
-    box-shadow: 0px 2px 8px 0px var(--clr-gray)
+    box-shadow: 0px 1px 8px 0px rgb(193, 223, 203);
     
 }
 textarea {
@@ -82,13 +81,23 @@ textarea {
     background-color: #f55c47;
     color:rgb(255, 255, 255);
 }
+button:hover{
+    background-color: #f5a447;
+    transition: all 0.3s ease-out;
+}
+button:active{
+    background-color: #b35b4f;
+    color:rgb(204, 204, 204);
+    transition: all ease-out;
+    
+}
 .eight-ball{
     
     background-color: #564a4a;
     width: 16rem;
     height: 16rem;
     border-radius: 50%;
-    margin: 3rem auto;
+    margin: 2.5rem auto;
     
 }
 .text-fill {
@@ -98,42 +107,40 @@ textarea {
     font-size: 1rem;
 }
 footer{ 
+    height: 7rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-end;
-    margin: 2rem auto;
-    text-align: center;
+    margin: 1rem auto;
     padding: 1rem;
     font-size: 0.9rem; 
+}
+a{
+    text-decoration: none;
+}
+hr{
+   height: 0.5px;
+   min-width: 100%;
+   background-color: var(--clr-dark);
+   margin-bottom: 1rem;
 }
 
 
 @media (min-width: 600px) {
-    body {
-        font-size: 1.8rem;
-    }      
+    * {
+        font-size: 1.3rem;
+    }    
+    footer > p, a{
+        font-size: 0.9rem;
+    }  
 }
 @media (min-width: 900px) {
-    *{
-        font-size: 1.8vw;
-    }
-    header{
-        font-size: 1.5rem;
-    }
-   header > p {
-       font-size: 1.5rem;
-   }
-   
     .container {
         display: flex;
         flex-direction: row-reverse;
         align-items: flex-end;
         justify-content: space-between;
-        margin-top: 3rem;
-    }
-    footer > p , a {
-        font-size: 0.8rem;
+        margin-top: 2rem;
     }
    
   
