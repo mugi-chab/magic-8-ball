@@ -3,6 +3,7 @@
     --clr-secundary: #9fe6a0;
     --clr-dark: #29211c;
     
+    
 }
 
 
@@ -14,18 +15,19 @@ h1 {
     font-size: 1.5em;
     margin: 0.67em 0;
     font-family: 'Rokkitt', serif;
+    color: var(--clr-dark);
 }
 
 body {
     font-size: 1.3rem;
+    color: var(--clr-dark);
 }
 
-*{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Ubuntu Mono', monospace;
-      color: var(--clr-dark);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu Mono', monospace;
 }
 
 .section{
@@ -43,7 +45,6 @@ body {
     max-width: 38rem;
     
 }
-
 header { 
     background-color: var(--clr-secundary);
     display: flex;
@@ -51,9 +52,7 @@ header {
     text-align: center;
     padding: 2rem;
     margin: 0 auto;
-    font-weight: bold;
-    
-   
+    font-weight: bold;   
 }
 .card{ 
     font-weight: bold;
@@ -68,6 +67,7 @@ header {
 }
 textarea {
     height: 4rem;
+    background-color: rgb(245, 240, 223);
 }
 
 .btn {
@@ -83,16 +83,18 @@ textarea {
 }
 button:hover{
     background-color: #f5a447;
+    box-shadow: 0px 1px 2px 0px rgb(58, 66, 61);
     transition: all 0.3s ease-out;
 }
 button:active{
-    background-color: #b35b4f;
+    opacity: 55%;
     color:rgb(204, 204, 204);
-    transition: all ease-out;
+    box-shadow: 0px 1px 2px 0px var(--clr-secundary);
+    box-shadow: inset 0px 2px 2px 0px var(--clr-primary);
+    transition: all 0.5s ease-out;
     
 }
 .eight-ball{
-    
     background-color: #564a4a;
     width: 16rem;
     height: 16rem;
@@ -107,22 +109,27 @@ button:active{
     font-size: 1rem;
 }
 footer{ 
+    width: 100%;
     height: 7rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-around;
+    text-align: center;
     margin: 1rem auto;
     padding: 1rem;
     font-size: 0.9rem; 
 }
 a{
     text-decoration: none;
+    color: var(--clr-dark);
 }
 hr{
-   height: 0.5px;
+   height: 0.1px;
    min-width: 100%;
-   background-color: var(--clr-dark);
-   margin-bottom: 1rem;
+   color: var(--clr-secundary);
+   opacity: 50%;
+   margin-bottom: 1.5rem;
+   
 }
 
 
