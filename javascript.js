@@ -22,7 +22,7 @@ var answers = ["Es tan sierto como mi puño en tu kara",
 "no kuentes kon ello"];
 
 window.onload = function () {
-    var eight = document.getElementById("eight");
+    var replace = document.getElementById("replace-me");
     var answer = document.getElementById("answer");
     var question = document.getElementById("question");
     var askButton = document.getElementById("ask_btn");
@@ -31,7 +31,7 @@ window.onload = function () {
         if (question.value.length < 1){
             alert('Pregunta algo!');
         } else {
-            eight.innerText = "";
+            replace.innerText = "";
             var num = Math.floor(Math.random() * Math.floor(answers.length));
             answer.innerText = answers[num];
         }
