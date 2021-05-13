@@ -19,7 +19,8 @@ var answers = ["Es tan sierto como mi puño en tu kara",
 "k peresa responder a eso",
 "preguntaselo a tu madre, anda",
 "ni lo sueñes",
-"no kuentes kon ello"];
+"no kuentes kon ello",
+"komo te lo digo pa ke no yores?"];
 
 window.onload = function () {
     var replace = document.getElementById("replace-me");
