@@ -64,7 +64,7 @@ header {
     padding: 0.3rem;
 
 }
-.triangle{
+.buble-tail{
     position: relative;
     left: 16rem;
     top: 0.5rem;
@@ -172,9 +172,9 @@ hr{
    
 }
 @media (min-width: 600px) {
-    * {
+    /* * {
         font-size: 1.3rem;
-    }    
+    }     */
     footer > p, a{
         font-size: 0.9rem;
     }  
@@ -192,6 +192,7 @@ hr{
         justify-content: center;
         margin-top: 1rem;
     }
+    
  
    
   /* cambiar al hacer focus el borde negro del textarea y el color del texto del input */
