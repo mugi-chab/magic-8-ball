@@ -2,7 +2,8 @@
     --clr-primary: #fffbdf;
     --clr-secundary: #c6ffc1;
     --clr-navy: #34656d;
-    --clr-dark: #334443;   
+    --clr-dark: #334443;
+    --clr-orange: #f5a447;  
 }
 html {
     line-height: 1.15; 
@@ -30,9 +31,11 @@ body {
     background-color: var(--clr-primary);
 }
 .grid {
+    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     min-height: 80vh;
     margin: 0 auto;
     max-width: 38rem;    
@@ -42,10 +45,36 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
     margin: 0 auto;
-    font-weight: bold;   
+    font-weight: bold;
+    margin-bottom: 2rem;  
+    /* border: 1px solid blue;  */
 }
+/* ANSWER */
+#answer-container{
+
+    text-align: center;
+    background-color: var(--clr-secundary);
+    border-radius: 1rem;
+    width: 50%;
+    margin: 1.3rem auto;
+    color: var(--clr-navy);
+    font-size: 1rem;
+    padding: 0.3rem;
+
+}
+.triangle{
+    position: relative;
+    left: 16rem;
+    top: 0.5rem;
+    background-color: var(--clr-secundary);
+    width: 2rem;
+    height: 1.5rem;
+    transform: rotate(-35deg);
+    /* border: 1px solid black; */
+}
+
 /* CARD */
 .card{ 
     font-weight: bold;
@@ -73,16 +102,14 @@ textarea {
     color:rgb(255, 255, 255);
 }
 button:hover{
-    background-color: #f5a447;
     box-shadow: 0px 1px 2px 0px rgb(58, 66, 61);
     transition: all 0.3s ease-out;
 }
 button:active{
     opacity: 65%; 
-    box-shadow: 0px -3px -2px 0px white;
-    box-shadow: inset 0px 2px 2px 0px var(--clr-navy);
-    transition: all 0.5s ease-out;
-    
+    box-shadow: 0px 14px 4px -1px white;
+    box-shadow: inset 0px 2px 2px 0px var(--clr-dark);
+    transition: all 0.5s ease-out;    
 }
 .text-fill {
     margin-top: 1rem;
@@ -92,25 +119,27 @@ button:active{
 }
 
 /* BOLA 8 */
+.container{
+    /* border: 1px solid red; */
+    min-width: 38rem;
+}
 .eight-ball{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 2rem auto; 
+    margin: 1rem auto; 
     background-color: #564a4a;
     width: 16rem;
     height: 16rem;
     border-radius: 50%;   
 }
-.numero{
+#eight{
     position: relative;
-    top: -4.6rem;      
+    top: -4.6rem;
+    font-size: 5rem;      
 }
-.numero > span{
-    font-size: 5rem;;
-}
-.pegatina{
+.eight-container{
     position: relative;
     top: 2rem;
     width: 7.5rem;
@@ -149,19 +178,23 @@ hr{
     footer > p, a{
         font-size: 0.9rem;
     }  
+    #answer-container > p{
+        font-size: 1rem;
+    }
+    
 }
 @media (min-width: 900px) {
     .container {
-        border: 1px solid blue;
+        
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         justify-content: center;
-        
         margin-top: 1rem;
     }
+ 
    
-  
+  /* cambiar al hacer focus el borde negro del textarea y el color del texto del input */
    
   
 }
