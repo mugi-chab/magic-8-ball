@@ -3,15 +3,15 @@ var answers = ["Es tan sierto como mi puño en tu kara",
 "venus asendente y jupiter en transito lento disen que si",
 "totalmente si, komo ke me yamo Yoni",
 "mecago en tó, po' claro!",
-"po claro! Esto es capitalismo ke esperabas colega?",
+"po claro! Esto es capitalismo ke esperabas kolega?",
 "con la d preguntas ke podrias aserme y me preguntas esa mierda",
-"po komo sigan votando a vox..",
+"po komo sigan votando a vox no se yo",
 "no kuentes con ello",
 "si tubiera un sigarrito te lo diria",
 "ke nooo",
 "kitate esa idea de la kabesa o te la kito yo",
 "con esa kara que tienes te digo yo k no",
-"se oye komo entrecortado",
+"se oye komo borroso",
 "si, tu asme kaso y veras",
 "eso preguntas con normalidad? yo k tu me lo miraba",
 "entre hoy o mañana te lo digo k aora me pillas liado",
@@ -27,14 +27,24 @@ window.onload = function () {
     var answer = document.getElementById("answer");
     var question = document.getElementById("question");
     var askButton = document.getElementById("ask_btn");
-
-    askButton.addEventListener("click", function(){
+    const getAnswer = function(){
         if (question.value.length < 1){
-            alert('Pregunta algo!');
+            alert('¡Preguntame algo!');
         } else {
             replace.innerText = "";
             var num = Math.floor(Math.random() * Math.floor(answers.length));
             answer.innerText = answers[num];
+        }
+    };
+
+    askButton.addEventListener("click", function(){
+         getAnswer();  
+    });
+
+    question.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter'){
+           getAnswer();
+           e.preventDefault();
         }
     });
 };
